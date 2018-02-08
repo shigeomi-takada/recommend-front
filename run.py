@@ -24,7 +24,7 @@ if __name__ == '__main__':
         raise Exception('テスト環境以上ではWSGI, gunicornなど, を使って起動すること')
 
     app.run(
-        host='127.0.0.1',
+        host='0.0.0.0',
         port=8000,
         debug=True,
     )

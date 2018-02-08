@@ -14,6 +14,12 @@ body {
 .card {
     margin-bottom: 0.3rem !important;
 }
+.collapsible {
+    shadow: none !important;
+}
+.collapsible-body {
+    padding: 0.6rem 1.6rem !important;
+}
 .icon-block {
   padding: 0 15px;
 }
@@ -22,4 +28,12 @@ body {
 }
 .recommend-search-box {
     padding-left: 12px !important;
+}
+.recommend-card-content {
+    padding: 0px 24px 10px 24px !important;
+}
+.recommend-card-username {
+    margin-left: 24px;
+    padding-top: 10px;
+    display: block;
 }

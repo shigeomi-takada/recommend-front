@@ -1,2 +1,4 @@
 time:2018-02-03 16:08:30,906	level:INFO	file:error.py	module:error	method:_ready	line:22	message:400 MIME type must be JSON.
 time:2018-02-03 16:10:46,260	level:INFO	file:error.py	module:error	method:_ready	line:22	message:400 MIME type must be JSON.
+time:2018-02-07 15:12:27,058	level:INFO	file:error.py	module:error	method:_ready	line:22	message:404 The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+time:2018-02-08 17:17:29,158	level:INFO	file:error.py	module:error	method:_ready	line:22	message:404 The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
