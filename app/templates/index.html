@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Is this spam?</title>
+  <title>Image searching engine</title>
   <link rel="shortcut icon" href="{{ url_for('static', filename='img/l_favicon.png') }}">
 
 
@@ -19,7 +19,8 @@
   <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/js/materialize.min.js"></script>
-  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+  
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </head>
 <body>
 <nav class="white" role="navigation">
@@ -33,7 +34,7 @@
                 </div>
                 <div class="input-field col s3 right-align" id="recommend-search-button">
                     <a class="waves-effect waves-light btn btn-small"
-                    v-on:click="submit" v-bind:class="{ disabled: isActive }">POST</a>
+                    v-on:click="submit" v-bind:class="{ disabled: isActive }">SEARCH</a>
                 </div>
             </form>
         </div>
@@ -42,31 +43,17 @@
 
 <br>
 
-<div class="container">
-    <div class="row">
 
-        <div class="col s12 l4">
-
-            <div class="col s12">
-                <div class="card">
-                    <div class="card-content" id="recommend-control">
-                        <a class="waves-effect waves-light btn" v-on:click="copy">All Copy</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div id="recommend-result" class="col s12 l8">
-            <result-component
-                v-for="item in items"
-                v-bind:message="item.message"
-                v-bind:title="item.title"
-                v-bind:key="item.id"
-                v-bind:class="{ 'animated fadeIn': isActive }"
-            ></result-component>
-        </div>
-
+<div class="row">
+    <div id="recommend-result" class="col s12">
+        <result-component
+            v-for="item in items"
+            v-bind:image="item.image"
+            v-bind:message="item.message"
+            v-bind:title="item.title"
+            v-bind:key="item.id"
+            v-bind:class="{ 'animated fadeIn': isActive }">
+        </result-component>
     </div>
 </div>
 

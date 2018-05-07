@@ -34,7 +34,7 @@ def get_index(name=None):
     return render_template('index.html', name=name)
 
 
-@app.route(ver + '/lancers', methods=['GET'])
+@app.route(ver + '/prototype', methods=['GET'])
 def get():
     # Validation().list_messages()
     return Recommend().get()
