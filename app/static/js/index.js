@@ -1,7 +1,9 @@
 ;(function(){
 
+
+
     //url = 'http://192.168.100.19:8000/v1/recommend'
-    url = 'http://127.0.0.1:8000/v1/recommend'
+    url = 'http://127.0.0.1:5000/v1/designs'
     axios.defaults.headers.common['Content-Type'] = 'application/json';
 
   /**
@@ -14,17 +16,18 @@
 
     Vue.component('result-component', {
         template:
-            '<div class="col s12 m4 l2">' +
+            '<div class="column">' +
                 '<div class="card">' +
-                    '<div class="card-image">' +
+                   '<div class="card-image">' +
                         '<img class="responsive-img" :src="image" />' +
                     '</div>' +
-                    '<div class="card-content">' +
-                        '<p>I am a very simple card. I am good at containing small bit</p>' +
+                    '<div class="card-action">' +
+                       '<p>{{ title }}</p>' +
+                       '<p><a target="_blank" :href="proposal_id">To page</a></p>' +
                     '</div>' +
                 '</div>' +
             '</div>',
-        props: ['image', 'title', 'message']
+        props: ['image', 'title', 'name', 'proposal_id']
     });
 
     var recommend_result = new Vue({
@@ -32,35 +35,30 @@
         //delimiters: ['${', '}'],
         el: '#recommend-result',
         data:  {
-            items: [],
+            uploads: [],
             isActive: true
         }
     });
 
     var recommend_search_button = new Vue({
         delimiters: ['${', '}'],
-        el: '#recommend-search-button',
-        data: {
-            isActive: false
-        },
+        el: '#recommend-search-form',
         methods: {
             submit: function() {
-
-                this.isActive = true
 
                 NProgress.start()
                 recommend_result.items = []
 
                 // 一瞬でも時間差で実行しないとanimationが動いているように見えない
                 setTimeout(function(){
-                    axios.get(url + '/prototype', {
+                    axios.get(url + '/search', {
                         params: {
                             // スペースはプラスで置き換えてくれる模様
                             keywords: $('#recommend-search-input-text').val()
                         }
                     })
                     .then(function (response) {
-                        recommend_result.items = response.data.images
+                        recommend_result.uploads = response.data.uploads
                     })
                     .catch(function (error) {
                         M.toast({

@@ -11,14 +11,19 @@ body {
 .col {
     padding: 0 .3rem !important;
 }
-.card {
-    margin-bottom: 0.3rem !important;
-}
 .collapsible {
     shadow: none !important;
 }
 .collapsible-body {
     padding: 0.6rem 1.6rem !important;
+}
+.card {
+    margin-bottom: 0.3rem !important;
+    width: 170px;
+}
+.card-action {
+    padding: 1px 12px !important;
+    word-break: break-all;
 }
 .icon-block {
   padding: 0 15px;
@@ -36,4 +41,29 @@ body {
     margin-left: 24px;
     padding-top: 10px;
     display: block;
+}
+.input-field .prefix.active {
+    color: #fff;
+}
+@media screen and (min-width: 1px) and (max-width: 767px){
+    #columns[data-columns]::before {
+        content: '2 .col-xs-6';
+    }
+}
+@media screen and (min-width:768px) and (max-width: 991px){
+    #columns[data-columns]::before {
+        content: '3 .col-sm-4';
+    }
+}
+@media screen and (min-width:992px) and (max-width: 9999px){
+    #columns[data-columns]::before {
+        content: '4 .col-md-3';
+    }
+}#grid[data-columns]::before {
+	content: '3 .column.size-1of3';
+}
+/* These are the classes that are going to be applied: */
+.column {
+    float: left;
+    margin-left: 8px;
 }
