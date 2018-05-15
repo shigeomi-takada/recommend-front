@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Image searching engine</title>
+<link rel="shortcut icon" href="{{ url_for('static', filename='img/l_favicon.png') }}">
+
+
+<!-- CSS -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/js/materialize.min.js"></script>
+<script src="{{ url_for('static', filename='js/salvattore.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+</head>
+<body>
+
+<div class="row">
+    <div class="col m8 detail-design-box">
+        <img class="responsive-img"
+        src="https://img.lancers.jp/proposal/3/2/0_11097494_450_15484969.jpg">
+    </div>
+</div>
+<div class="detail-design-box-right">
+
+    <div class="detail-design-user-profile">
+        <div class="row">
+            <div class="col m3">
+                <img width="76px" class="responsive-img" src="https://img.lancers.jp/userprofile/d/7/d775338a7081c577ae3393b6aba22801105d78c07edbaf15937dc9ba96535f7c_1168715_100.jpg?20180515142528">
+            </div>
+            <div class="col m9 center-align">
+                <p>my name is Michael</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-border">
+        <a class="waves-effect waves-light btn" style="margin-bottom: 30px;">この人に依頼する</a>
+    </div>
+
+    <div class="detail-each-box">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+                <p class="left-align">メッセージを送る</p>
+              <textarea rows="4" placeholder="type here"class="detail-message-textarea"></textarea>
+            </div>
+          </div>
+        </form>
+    </div>
+
+    <div class="my-border"></div>
+
+
+    <div class="col s12 detail-each-box">
+        <p class="left-align">Michael's other designs</p>
+        <div class="row">
+
+            <img class="col s3" height="88px"
+            src="https://img.lancers.jp/proposal/0/0/0_11097494_150_15484969.jpg">
+            <img class="col s3" height="88px"
+            src="https://img.lancers.jp/proposal/0/0/0_11104485_150_15497726.jpg">
+            <img class="col s3" height="88px"
+            src="https://img.lancers.jp/proposal/0/0/0_11098074_150_15486048.jpg">
+            <img class="col s3" height="88px"
+            src="https://img.lancers.jp/proposal/0/0/0_11098074_150_15486047.jpg">
+            <img class="col s3" height="88px"
+            src="https://img.lancers.jp/proposal/0/0/0_11098074_150_15486048.jpg">
+            <img class="col s3" height="88px"
+            src="https://img.lancers.jp/proposal/0/0/0_11098074_150_15486047.jpg">
+            <img class="col s3" height="88px"
+            src="https://img.lancers.jp/proposal/0/0/0_11104485_150_15497726.jpg">
+            <img class="col s3" height="88px"
+            src="https://img.lancers.jp/proposal/0/0/0_11097494_150_15484969.jpg">
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<a href="/" class="btn-floating btn-large waves-effect waves-light red to-home-button">
+  <i class="material-icons">home</i>
+</a>
+</body>
+</html>

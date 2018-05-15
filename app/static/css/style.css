@@ -67,3 +67,64 @@ body {
     float: left;
     margin-left: 8px;
 }
+.index-container {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    margin-bottom: 70px;
+}
+.index-search-input {
+    padding-left: 12px !important;
+}
+.index-subtitle {
+    maring-top: 20px;
+}
+.index-category-icon {
+    width: 140px;
+}
+.index-category-box {
+    text-align: center;
+}
+.index-category-l-box {
+    margin-top: -30px !important;
+}
+.to-home-button {
+    bottom: 45px;
+    right: 60px;
+    position: fixed;
+}
+.detail-design-box {
+    text-align: center;
+    margin-top: 70px;
+}
+.detail-design-box-right {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+.detail-design-user-profile {
+    padding: 26px 0 0 26px !important;
+}
+.my-border {
+    border-bottom: 1px solid #e6e6e6;
+}
+.detail-message-textarea {
+    padding: 6px 12px;
+    display: block;
+    color: #555;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    width: 100%;
+    max-width: 35em;
+    line-height: 1.8;
+    height: auto;
+}
+.detail-each-box {
+    padding: 12px 32px 0 32px !important;
+}

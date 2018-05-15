@@ -33,11 +33,13 @@ def get_ping():
 def get_index(name=None):
     return render_template('index.html', name=name)
 
+@app.route('/search', methods=['GET'])
+def get_search(name=None):
+    return render_template('search.html', name=name)
 
-@app.route(ver + '/prototype', methods=['GET'])
-def get():
-    # Validation().list_messages()
-    return Recommend().get()
+@app.route('/detail/<upload_id>', methods=['GET'])
+def get_detail(upload_id):
+    return render_template('detail.html')
 
 
 # ---------------------------------------------
