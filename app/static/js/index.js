@@ -14,8 +14,8 @@
         return params[1]
     }
 
-    //url = 'http://192.168.100.19:8000/v1/recommend'
-    url = 'http://127.0.0.1:5000/v1/designs'
+    //const url = 'http://192.168.100.19:5000/v1/designs'
+    const url = 'http://127.0.0.1:5000/v1/designs'
     axios.defaults.headers.common['Content-Type'] = 'application/json';
 
   /**

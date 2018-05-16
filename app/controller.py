@@ -30,16 +30,16 @@ def get_ping():
 
 
 @app.route('/', methods=['GET'])
-def get_index(name=None):
-    return render_template('index.html', name=name)
+def get_index():
+    return render_template('index.html')
 
 @app.route('/search', methods=['GET'])
 def get_search(name=None):
     return render_template('search.html', name=name)
 
-@app.route('/detail/<upload_id>', methods=['GET'])
-def get_detail(upload_id):
-    return render_template('detail.html')
+@app.route('/detail/<proposal_id>/<upload_id>', methods=['GET'])
+def get_detail(proposal_id, upload_id):
+    return render_template('detail.html', proposal_id=proposal_id, upload_id=upload_id)
 
 
 # ---------------------------------------------
