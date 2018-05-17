@@ -5,7 +5,7 @@ from flask import render_template
 from app import app
 from app.http.validation import Validation
 from app.http.connection import Connection
-from app.http.recommend import Recommend
+from app.http.search import Search
 from app.http.error import Error
 
 
@@ -39,7 +39,18 @@ def get_search(name=None):
 
 @app.route('/detail/<proposal_id>/<upload_id>', methods=['GET'])
 def get_detail(proposal_id, upload_id):
-    return render_template('detail.html', proposal_id=proposal_id, upload_id=upload_id)
+    item = Search().get_vocabulary(upload_id)
+
+    if 'vocabulary' not in item:
+        vocabulary = []
+    else:
+        vocabulary = item['vocabulary'].split(' ')
+
+    return render_template(
+        'detail.html',
+        proposal_id=proposal_id,
+        upload_id=upload_id,
+        vocabulary=vocabulary)
 
 
 # ---------------------------------------------

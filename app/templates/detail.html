@@ -27,10 +27,22 @@
 
 <div class="row">
     <div class="col m8 detail-design-box">
-        <img class="responsive-img"
-        src="https://img.lancers.jp/proposal/0/0/0_{{ proposal_id }}_450_{{ upload_id }}.jpg">
+        <div class="row">
+            <div class="col m12">
+                <img class="responsive-img"
+                src="https://img.lancers.jp/proposal/0/0/0_{{ proposal_id }}_450_{{ upload_id }}.jpg">
+            </div>
+            <div class="my-badge">
+                {% for voc in vocabulary %}
+                    <a href="http://127.0.0.1:8000/search?keywords={{ voc }}">
+                        <span class="new badge blue-grey lighten-1" data-badge-caption="">{{ voc }}</span>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
+
 <div class="detail-design-box-right">
 
     <div class="detail-design-user-profile">

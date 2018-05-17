@@ -79,8 +79,8 @@
                         }
                     })
                     .then(function (response) {
-                        if(response.data.uploads) {
-                            recommend_result.uploads = response.data.uploads
+                        if(response.data.designs) {
+                            recommend_result.uploads = response.data.designs
                         } else {
                             M.toast({
                                html: 'No Contents',

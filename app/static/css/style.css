@@ -94,7 +94,7 @@ body {
 }
 .detail-design-box {
     text-align: center;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 .detail-design-box-right {
     position: fixed;
@@ -127,4 +127,16 @@ body {
 }
 .detail-each-box {
     padding: 12px 32px 0 32px !important;
+}
+.my-badge {
+    width: 80%;
+    margin-top: 40px;
+    float: left;
+    padding-left: 100px;
+    padding-right: 20px;
+}
+.my-badge span {
+    margin-left: 4px;
+    margin-top: 4px;
+    float: left;
 }
